@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-	<h1>Login</h1>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-sm">
+    <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">THIS IS THE JENKINS CICD</h1>
 
-	<form action="ValidateServlet1" method="post">
-		username: <input type="text" name="username" /><br /> password: <input
-			type="password" name="password" /><br /> <input type="submit"
-			value="Login" />
-	</form>
+    <form action="ValidateServlet1" method="post" class="space-y-4">
+      <div>
+        <label for="username" class="block text-gray-700">Username</label>
+        <input type="text" name="username" id="username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      <div>
+        <label for="password" class="block text-gray-700">Password</label>
+        <input type="password" name="password" id="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      <div>
+        <input type="submit" value="Login" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300" />
+      </div>
+    </form>
+  </div>
 </body>
 </html>
